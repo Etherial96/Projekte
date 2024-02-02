@@ -1,0 +1,14 @@
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung perfekte funktion\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung perfekte funktion\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung perfekte funktion\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung perfekte funktion\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung perfekte funktion\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung perfekte funktion\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matrizen Rechnung perfekte funktion\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

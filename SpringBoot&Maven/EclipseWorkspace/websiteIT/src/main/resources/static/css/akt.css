@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+.produkte {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 4%;
+  box-sizing: border-box;
+}
+
+.pliste {
+  background-color: lightgreen;
+  flex: 0 0 20%; /* Setzt die Breite auf 20% und verhindert, dass sie wächst oder schrumpft */
+}
+
+.placement {
+  background-color: yellow;
+  flex: 0 0 60%; /* Setzt die Breite auf 60% und verhindert, dass sie wächst oder schrumpft */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

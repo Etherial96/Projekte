@@ -1,0 +1,46 @@
+/* Main Body of HTML */
+body{
+    font-family: Calibri;
+    font-size: 190%;
+}
+/* Class container for the LOGIN container div */
+.container {
+    margin: 0 auto;
+    width: 25%;
+}
+/* Button for logging in */
+#loginbutton {
+    background-color: #a49797;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 40%;
+}
+#loginbutton:hover {
+    background-color: rgb(104, 99, 101);
+}
+/* div error-message */
+#error {
+    color: red;
+    font-size: 80%;
+    text-align: center;
+}
+/* input field elements for text and password only */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 5%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 50%;
+}
+/* id headline for "Login-Formular" h2 */
+#headline{
+    color: grey;
+    text-align:center;
+    font-size: 100%;
+}

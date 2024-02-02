@@ -1,0 +1,116 @@
+/* Main Body braucht eine allgemein Konfiguration für alle Elemente */
+body {
+    font-family: Calibri;
+    font-size: 1.8vw;
+}
+/* Jedes Element von der unordentlichen Liste ohne der Listentag */
+nav ul {
+    list-style-type: none;
+}
+/* Das Navigationsmenu/Header hat eine Blauische Farbe und hat mehr Platz innerlich (Padding) */
+nav {
+    background-color: rgb(23, 142, 229);
+    padding: 5px;
+}
+/* Innerhalb der Liste werden alle Texte angezeigt und jedes Wort hat eine bestimmte Breite (3 / 100 = 33%) */
+nav ul li{
+    display:inline-block;
+    width: 33%;
+}
+/* Dropdown Knöpfe/Buttons */
+.dropbtn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: 2px solid black;
+    color: white;
+    display: inline;
+    width: 100%;
+}
+/* Container <div> - wird gebraucht um die Position des Dropdown-Content anzugeben */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Versteckt by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Links innerhalb der Klasse dropdown-content */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.4vw;
+}
+/* Bei Mausanzeige werden bei den einzelnen a href Links die Hintergrundfarbe bei denen geändert */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/* Anzeige des Menüs bei Mausanzeige */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Hintergrundfarbe bei einem Button ändern: wenn die Maus sich auf diese Elementen befindet*/
+.dropdown:hover .dropbtn {
+    background-color: rgb(23, 112, 181);
+}
+/* Alle <a href> Link Texten werden mittig zugeordnet */
+.link{
+    text-align:center;
+}
+/* Tabelle mit Id = table wird verarbeitet */
+#table {
+    display: block;
+    margin-top: 2%;
+    background-color: dodgerblue;
+}
+/* Jede tabelle Header und Tabelle Data bekommt einen Anteil an Raum bei der Breite (5 / Breite_der_Webseite = EinzelnBreite_FürEineSpalte) */
+th, td {
+    width: 380.25px;
+}
+/* Bei th = Table Header nur die Hintergrundfarbe wird geändert */
+th {
+    background-color: white;
+}
+/* Jede Spalte enthält eine unterschiedliche Schriftgröße, um 0.3% innerlich nach rechts verschoben und die Schriftfarbe ist weiß */
+td {
+    padding-left: 0.3%;
+    font-size: 1.3vw;
+    color: white;
+}
+/* Die Grenzen an einer Tabelle hat eine Bestimmte Form, mit einer bestimmten Farbe und die Art der Zeilen und Spalten ist zusammengemischt (Collapse) */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+/* Hauptbody ID für den header und die Tabelle: Konvertiert die Hintergrundfarbe */
+#Hauptbody {
+    background-color: rgb(23, 142, 229);
+}
+/* H2 Headline */
+#headline{
+    margin: 10px;
+    font-size: 200%;
+}
+.btn_effects {
+    background-color: #b7b7b7;
+    font-size: 75%;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    position: absolute;
+    right: 1em;
+    top: 2em;
+}
+
+    .btn_effects:hover {
+        background-color: #cccccc;
+    }

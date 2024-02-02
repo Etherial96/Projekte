@@ -1,0 +1,11 @@
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.deps.json
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.json
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.runtimeconfig.dev.json
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.dll
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\bin\Debug\netcoreapp2.0\ConsoleApp1.pdb
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.dll
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\einfache wiederholungsaufgaben_übungen\ConsoleApp1\ConsoleApp1\obj\Debug\netcoreapp2.0\ConsoleApp1.pdb

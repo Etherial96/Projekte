@@ -1,0 +1,10 @@
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\obj\Debug\taschenrechner.csprojResolveAssemblyReference.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\obj\Debug\taschenrechner.Form1.resources
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\obj\Debug\taschenrechner.Properties.Resources.resources
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\obj\Debug\taschenrechner.csproj.GenerateResource.Cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\obj\Debug\taschenrechner.csproj.CoreCompileInputs.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\bin\Debug\taschenrechner.exe.config
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\bin\Debug\taschenrechner.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\bin\Debug\taschenrechner.pdb
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\obj\Debug\taschenrechner.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\taschenrechner\Taschenrechner\taschenrechner\taschenrechner\obj\Debug\taschenrechner.pdb

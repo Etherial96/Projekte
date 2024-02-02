@@ -1,0 +1,68 @@
+import torch
+import torch.nn as nn
+import torch.nn. functional as F
+import torch.optim as optim
+# Alte Art mit Variable (veraltet)
+#from torch.autograd import Variable
+
+# Neue Art mit Tensor
+#tensor = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
+#variable = Variable(tensor, requires_grad=True)
+
+class MeinNetz(nn.Module):
+    def __init__(self):
+        super(MeinNetz, self).__init__()
+        self.lin1 = nn.Linear(10, 10)
+        self.lin2 = nn.Linear(10,10)
+    
+    def forward(self, x):
+        x = F.relu(self.lin1(x))
+        x = self.lin2(x)
+        return x
+    
+    def num_flat_features(self, x):
+        size = x.size()[1:]
+        num = 1
+        for i in size:
+            num *= i
+        return num
+    
+netz = MeinNetz()
+for i in range(100):
+    x = [0,0,1,0,0,0,0,1,0,1]
+    input = torch.Tensor([x for _ in range(10)])
+    out = netz(input)
+    x = [1,1,0,1,1,1,1,0,1,0]
+
+    target= torch.Tensor([x for _ in range(10)])
+    target.requires_grad_()
+    getskills = nn.MSELoss()
+    loss = getskills(out, target)
+    print(loss)
+    
+    netz.zero_grad()
+    loss.backward()
+    #print(target.grad)
+    optimizer = optim.SGD(netz.parameters(), lr = 0.11)
+    optimizer.step()
+    
+    
+"""input = torch.randn(10,10)
+
+out = netz(input)
+input = [0, 1, 1, 1, 1, 0, 0, 1, 0, 1]
+# Ziel erstellen
+target = torch.Tensor([ input for _ in range(10)])
+target.requires_grad_()
+
+getskills = nn.MSELoss()
+loss = getskills(out, target)
+print(loss)
+
+print(loss.grad_fn.next_functions[0][0])"""
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+.wood{
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 100% der Bildschirmhöhe */
+}
+
+#topgif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Das Bild wird proportional zugeschnitten, um den Container zu füllen */
+}
+#artname {
+    transform: translate(0%, -150%);
+    color: #fff; /* Textfarbe anpassen */
+    font-size: calc(120px + 1.5vw); /* Schriftgröße anpassen */
+    font-weight: bold; /* Schriftgewicht anpassen */
+    text-align: center;
+    z-index: 1; /* Stellt sicher, dass der Text über dem Bild liegt */
+}
+#newvideos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 4%;
+	box-sizing: border-box;
+}
+
+#videoupload1 {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+ 	width: calc(400px + 1.5vw);
+}
+#videoupload2 {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+ 	width: calc(400px + 1.5vw);
+}
+#videoupload3 {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+ 	width: calc(400px + 1.5vw);
+}
+.button2 {
+  display: relative;
+  margin-top: 20px;
+  background-color: #4B725C;
+  padding: 10px 50px; /* Reduziere die Padding-Werte nach Bedarf */
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%; /* Ändere die Breite nach Bedarf */
+  height: auto; /* Ändere die Höhe nach Bedarf */
+  margin-left: auto; /* Hinzugefügt: zentriert den Button horizontal */
+  margin-right: auto; /* Hinzugefügt: zentriert den Button horizontal */
+}
+.button2:hover {
+	background-color: #40624F;
+}
+@media screen and (max-width: 1589px) {
+	
+	#artname{
+	transform: translate(0%, -170%);
+	font-size:calc(70px + 1.5vw);
+	}
+    #newvideos {
+	flex-wrap: wrap;
+	}
+	#videoupload3 {
+	margin-top:5%;
+	}
+}
+@media screen and (max-width: 1025px) {
+	#videoupload2 {
+	margin-top:5%;
+	}
+}

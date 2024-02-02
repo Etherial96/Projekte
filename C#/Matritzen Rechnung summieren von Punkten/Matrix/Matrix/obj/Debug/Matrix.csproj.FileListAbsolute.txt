@@ -1,0 +1,7 @@
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matritzen Rechnung summieren von Punkten\Matrix\Matrix\bin\Debug\Matrix.exe.config
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matritzen Rechnung summieren von Punkten\Matrix\Matrix\bin\Debug\Matrix.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matritzen Rechnung summieren von Punkten\Matrix\Matrix\bin\Debug\Matrix.pdb
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matritzen Rechnung summieren von Punkten\Matrix\Matrix\obj\Debug\Matrix.csprojResolveAssemblyReference.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matritzen Rechnung summieren von Punkten\Matrix\Matrix\obj\Debug\Matrix.csproj.CoreCompileInputs.cache
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matritzen Rechnung summieren von Punkten\Matrix\Matrix\obj\Debug\Matrix.exe
+C:\Users\leon.schurna\Desktop\Arbeitsthemen\c# programme\Matritzen Rechnung summieren von Punkten\Matrix\Matrix\obj\Debug\Matrix.pdb

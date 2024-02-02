@@ -1,0 +1,43 @@
+﻿/* Button Effects fuer das Senden */
+.btn_effects {
+    background-color: #555555;
+    font-size: 1vw;
+    border-radius: 4px;
+    color: white;
+    padding: 0.5%;
+    float: right;
+    width: 32.5%;
+    border-style: none;
+}
+/* Button Effects mit Effect Hover mit Maus */
+.btn_effects:hover {
+    background-color: #383838;
+}
+/* Bodies: Hauptbody des HTML Elements als ID definiert*/
+#bodies {
+    font-size: 1.3vw;
+    font-family: Arial;
+}
+/* Container der Webseite als Klasse definiert */
+.container {
+    width: 40%;
+    margin: 0 auto;
+}
+/* Klasse fuer Labels */
+.labels {
+    text-align: center;
+    margin-top: 1%;
+}
+/* Klasse fuer Inputs */
+.inputs {
+    width: 100%;
+    margin-top: 5%;
+}
+/* Klasse fuer register */
+.register {
+    padding: 1%;
+    font-size: 80%;
+    height: 0.5%;
+    width: 33%;
+}
+

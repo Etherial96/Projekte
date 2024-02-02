@@ -1,0 +1,18 @@
+spring.datasource.url = jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username = postgres
+spring.datasource.password = password
+spring.jpa.hibernate.ddl-auto = create-drop
+spring.profiles.active=dev
+spring.http.multipart.enabled=true
+spring.http.multipart.file-extension-mapping.png=image/png
+#spring.security.user.name=admin
+#spring.security.user.password=1234
+# Erlaube den Zugriff auf /receiveMessage für alle
+security.basic.path.receiveMessage=permitAll
+
+# Deaktiviere CSRF-Schutz (VORSICHT: Nur zu Testzwecken verwenden)
+security.enable-csrf=false
+
+# Erlaube einfache Authentifizierung (Basic Authentication)
+security.basic.enabled=true
+

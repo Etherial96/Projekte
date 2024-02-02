@@ -1,0 +1,62 @@
+{
+  "intents": [
+    {
+      "tag": "greetings",
+      "patterns": [
+        "Hallo",
+        "Hi",
+        "Wie geht es dir",
+        "Ist jemand da?",
+        "Guten Tag"
+      ],
+      "responses": [
+        "Hallo :-)",
+        "Hallo, danke für deinen Besuch",
+        "Hallo, wie kann ich dir helfen?",
+        "Hi, wie kann ich dir behilflich sein?"
+      ]
+    },
+    {
+      "tag": "Produktanfrage",
+      "patterns": [
+        "Erzähl mir von deinen Produkten",
+        "Was verkaufst du?",
+        "Kannst du mir deine Produkte zeigen?",
+        "Ich suche etwas zum Kaufen"
+      ],
+      "responses": [
+        "Natürlich, wir haben eine Vielzahl von Produkten. Wonach suchst du konkret?",
+        "Unsere Produkte reichen von [Kategorie] bis [Kategorie]. Gibt es etwas Bestimmtes, an dem du interessiert bist?",
+        "Natürlich! Welche Art von Produkt interessiert dich?"
+      ]
+    },
+    {
+      "tag": "Bestellstatus",
+      "patterns": [
+        "Wo ist meine Bestellung?",
+        "Kannst du meinen Bestellstatus überprüfen?",
+        "Erzähl mir von meiner letzten Bestellung",
+        "Verfolge meine Bestellung"
+      ],
+      "responses": [
+        "Ich kann dir dabei helfen. Bitte gib mir deine Bestellnummer.",
+        "Natürlich, ich brauche nur deine Bestellnummer, um den Status zu überprüfen.",
+        "Natürlich. Um den Status deiner Bestellung zu überprüfen, benötige ich deine Bestellnummer."
+      ]
+    },
+    {
+      "tag": "Zahlungsanfrage",
+      "patterns": [
+        "Wie kann ich zahlen?",
+        "Welche Zahlungsmethoden akzeptiert ihr?",
+        "Erzähl mir von euren Zahlungsoptionen",
+        "Ist es sicher, online zu zahlen?"
+      ],
+      "responses": [
+        "Wir akzeptieren [Liste der Zahlungsmethoden]. Deine Zahlung ist bei uns sicher.",
+        "Du kannst mit [Zahlungsmethoden] bezahlen. Es ist vollkommen sicher und geschützt.",
+        "Wir bieten verschiedene Zahlungsoptionen an, einschließlich [Zahlungsmethoden]. Deine Sicherheit hat für uns oberste Priorität."
+      ]
+    }
+  ]
+}

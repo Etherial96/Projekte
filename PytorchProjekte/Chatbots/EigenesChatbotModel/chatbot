@@ -1,0 +1,185 @@
+import torch
+import torch.nn as nn
+import torch.nn. functional as F
+import torch.optim as optim
+import torchtext
+from torch.autograd import Variable
+import numpy as np
+#from torchtext.data.utils import get_tokenizer
+#from torch.nn.utils.rnn import pad_sequence
+from torch.utils.data import TensorDataset,DataLoader
+#import spacy
+
+from deutschzuBagVektorASaetzeVektor import erstelle_bag_und_vektoren
+from deutschzuBagVektorASaetzeVektor import erstelle_vektoren_fuer_saetze
+from deutschzuBagVektorASaetzeVektor import erstelle_vektoren_fuer_bot
+
+kwargs = {'num_workers': 1, 'pin_memory': True}
+
+class Netz(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size):
+        super(Netz, self).__init__()
+        self.embedding = nn.Embedding(input_size, 18)
+        self.rnn1 = nn.LSTM(1030, 300, batch_first=True)
+        self.dropout1 = nn.Dropout(0.5)
+        self.relu1 = nn.ReLU()
+        self.rnn2 = nn.LSTM(300, 300, batch_first=True)
+        self.dropout2 = nn.Dropout(0.5)
+        self.relu2 = nn.ReLU()
+        self.fc = nn.Linear(300, output_size)
+        
+        
+
+    def forward(self, x):
+        
+        #print('1',x.shape)  
+        x = self.embedding(x)
+        #print('2',x.shape)
+        x = x.permute(0, 2, 1)  # Merken Wichtig, spart Zeit
+        #print('3',x.shape)
+        x, _ = self.rnn1(x)
+        #print('4',x.shape)    
+        x = self.relu1(x)
+        #print('5',x.shape)
+        x = self.dropout1(x)
+        x, _ = self.rnn2(x)
+        x = self.relu2(x)
+        x = self.dropout2(x)
+        #print('6',x.shape)
+        x = self.fc(x)
+        #print('7',x.shape)
+
+        return x
+
+
+def train(model, train_loader, target_loader, optimizer, criterion, epoch, epocheanzahl):
+    model.train()
+    total_loss = 0.0
+
+    for batch_id, (train_data, targets) in enumerate(zip(train_loader, target_loader)):
+        optimizer.zero_grad()
+        #print('out1',train_data.shape)
+        outputs = model(train_data)
+        #print('target1 ',targets.shape)
+        # Flattening der Ziel-Tensoren
+        #targets = targets.view(10, -1)
+        #print('target2 ',targets.shape)
+        #print('outputs2 ',outputs.shape)
+        
+        loss = criterion(outputs, targets)
+        loss.backward()
+        optimizer.step()
+
+        total_loss += loss.item()
+
+    if epoch % 25 == 0:
+        print(f"Epoch {epoch}/{epocheanzahl}, Loss: {total_loss / len(train_loader)}")
+
+def test(model, train_loader, target_loader,criterion, epoch):
+    model.eval()  # Setzen Sie das Modell in den Evaluationsmodus
+
+    with torch.no_grad():  # Deaktivieren Sie das Gradienten-Tracking während des Tests
+        total_loss = 0.0
+        for batch_id, (train_data, targets) in enumerate(zip(train_loader, target_loader)):
+            outputs = model(train_data)
+            loss = criterion(outputs, targets)
+            total_loss += loss.item()
+        
+        average_loss = total_loss / len(train_loader)
+        if epoch % 25 == 0:
+            print(f'Test Loss: {average_loss:.6f}')
+
+
+# ... (Der restliche Code bleibt unverändert)
+
+if __name__ == '__main__':
+
+    #kwargs = {'num_workers': 1, 'pin_memory': False}
+
+    textdokument = 'Antworten&FragenGetrennt.txt'
+    train_data, vektor_dict = erstelle_bag_und_vektoren(textdokument)
+    train_data = torch.tensor(train_data, dtype=torch.long).cuda()
+    #dataseta = TensorDataset(train_data)
+    train_loader = DataLoader(train_data, batch_size=10, shuffle=True, pin_memory=False)
+    #c = 0
+    #for idx in train_loader:
+        #print(f"{c}.{idx[0].shape}:")
+        #c += 1
+    #for batch_id, data in enumerate(train_loader):
+        #inputs = data[0]  # Annahme: Die Eingabedaten befinden sich an erster Stelle im Tupel
+        #print(f"Batch {batch_id + 1}, Inputs shape: {inputs.shape}")
+    #print('Korrekt?', train_data.dtype)
+    # Beispielaufruf für die Antworten
+    #for idx, (value) in enumerate(train_data):
+        #print(idx,'  ', value)
+    #for idx, (id) in enumerate(train_data):
+        #print(idx,id)
+    target_data, max_vektor_laenge = erstelle_vektoren_fuer_saetze(textdokument, vektor_dict)
+    target_data = torch.tensor(target_data, dtype=torch.float).cuda()
+    #print(target_data.shape)
+    #print('Korrekt?', target_data.dtype)
+    #datasetb = TensorDataset(target_data)
+    target_loader = DataLoader(target_data, batch_size=10, pin_memory=False)
+    #print('lücke')
+    #c = 0
+    #for idx in target_loader:
+        #print(f"{c}.{idx[0].shape}:")
+        #c += 1
+    #exit()
+    #hyperparameter
+    input_size = 1030
+    hidden_size = 1030
+    output_size = 1030
+    epocheanzahl= 500
+    model = Netz(input_size, output_size, hidden_size)
+    model.cuda()
+
+    optimizer = optim.Adam(model.parameters(), lr=0.00005)
+    criterion = nn.BCEWithLogitsLoss()
+    for epoch in range(1, epocheanzahl):
+        train(model, train_loader, target_loader, optimizer, criterion, epoch, epocheanzahl)
+        test(model, train_loader, target_loader,criterion, epoch)   
+    torch.save(model,'firstone.pt') 
+        #print("dd")
+    
+    # Beispieltext für die Eingabe
+
+loaded_model = torch.load('firstone.pt')
+
+# Setzen des Modells in den Evaluationsmodus
+loaded_model.eval()
+def generate_sentence(input_text, model, vektor_dict):
+    model.eval()
+
+    vektorisierte_input, _ = erstelle_vektoren_fuer_bot(input_text, vektor_dict)
+    input_tensor = torch.tensor(vektorisierte_input, dtype=torch.long).cuda()
+
+    with torch.no_grad():
+        output_tensor = model(input_tensor)
+        predicted_classes = torch.argmax(output_tensor, dim=2).tolist()
+
+    generated_sentence = []
+    for word_predictions in predicted_classes[0]:
+        for idx, (wort, value) in enumerate(vektor_dict.items()):
+            if idx == word_predictions:
+                generated_sentence.append(wort)
+
+    return " ".join(generated_sentence)
+
+# Beispielaufruf
+start_texts = ["Was ist dein Lieblingsessen gestern", "Erzähle mir eine Geschichte", "Wie ist das Wetter heute"]
+
+for start_text in start_texts:
+    generated_sentence = generate_sentence(start_text, loaded_model, vektor_dict)
+    print(f"Input: {start_text}, Generated Sentence: {generated_sentence}")
+
+#print(vektorisierte_input,' - ',max_vektor_laenge)
+
+#for id in vektorisierte_input:
+    #print(id)
+#for idx, (wort, value) in enumerate(vektor_dict.items()):
+    #print(idx)
+    #for id in vektorisierte_input:
+        #if np.all(value == id):
+            #print(value,' + ',id,'  +  ' ,c)
+    

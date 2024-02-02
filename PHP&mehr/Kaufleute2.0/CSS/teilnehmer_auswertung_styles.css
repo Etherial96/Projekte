@@ -1,0 +1,42 @@
+/* Main Body braucht eine allgemein Konfiguration für alle Elemente */
+body {
+    font-family: Calibri;
+    font-size: 1.8vw;
+}
+/* Jede tabelle Header und Tabelle Data bekommt einen Anteil an Raum bei der Breite (5 / Breite_der_Webseite = EinzelnBreite_FürEineSpalte) */
+th, td {
+    width: 476px;
+}
+/* Jede Spalte enthält eine unterschiedliche Schriftgröße, um 0.3% innerlich nach rechts verschoben und die Schriftfarbe ist weiß */
+td {
+    padding-left: 0.3%;
+    font-size: 1.3vw;
+    color: white;
+    text-align: center;
+}
+/* Die Grenzen an einer Tabelle hat eine Bestimmte Form, mit einer bestimmten Farbe und die Art der Zeilen und Spalten ist zusammengemischt (Collapse) */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: dodgerblue;
+}
+/* Hauptbody ID für den header und die Tabelle: Konvertiert die Hintergrundfarbe */
+#Hauptbody {
+    background-color: rgb(23, 142, 229);
+}
+/* H2 Headline */
+#headline {
+    margin: 10px;
+    font-size: 150%;
+    text-align: center;
+}
+#zurueck {
+    background-color: #a49797;
+    color: white;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    font-size: 80%;
+}

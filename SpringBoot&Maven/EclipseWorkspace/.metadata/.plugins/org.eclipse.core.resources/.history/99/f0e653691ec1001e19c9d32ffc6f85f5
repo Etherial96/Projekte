@@ -1,0 +1,51 @@
+package com.first.websiteIT;
+
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+
+@RestController
+public class BotController {
+
+    @PostMapping("/sendMessage")
+    public String sendMessage(@RequestParam String userMessage) 
+    {
+        // Hier kannst du die Benutzernachricht verarbeiten
+        System.out.println("Received from user: " + userMessage);
+
+        // Sende die Benutzernachricht an das Python-Skript
+        String pythonScriptUrl = "http://host.docker.internal:5000/userMessage";
+       // String botResponse = sendToPythonScript(pythonScriptUrl, userMessage);
+
+        return "redirect:/";
+    }
+
+    private String sendToPythonScript(String url, String message) 
+    {
+        // Erstelle eine Instanz von RestTemplate
+        RestTemplate restTemplate = new RestTemplate();
+
+        // Setze die Header für die Anfrage
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        // Erstelle die Anfrage-Entität mit der Benutzernachricht
+        HttpEntity<String> requestEntity = new HttpEntity<>(message, headers);
+
+        // Sende die POST-Anfrage an das Python-Skript und erhalte die Antwort
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, requestEntity, String.class);
+
+        // Extrahiere die Antwort aus der ResponseEntity
+        String botResponse = responseEntity.getBody();
+
+        // Gib die Antwort zurück
+	        return botResponse;
+    }
+}

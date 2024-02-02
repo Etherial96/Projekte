@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.example.beispielprojekt.City.isCapital&apos; in &apos;com.example.beispielprojekt.City&apos;&#x0D;&#x0A;- Original project: &apos;beispiel-projekt&apos;&#x0D;&#x0A;- Original element: &apos;com.example.beispielprojekt.City.isCapital&apos;&#x0D;&#x0A;- Getter method name: &apos;isCapital&apos;&#x0D;&#x0A;- Setter method name: &apos;setCapital&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;isCapital&apos;" flags="589830" getter="isCapital" id="org.eclipse.jdt.ui.self.encapsulate" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.beispielprojekt{City.java[City^isCapital" insertion="5" setter="setCapital" stamp="1699214183207" version="1.0" visibility="1"/>
+</session>

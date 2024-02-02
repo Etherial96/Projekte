@@ -1,0 +1,22 @@
+document.getElementById('sendMessageForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Verhindert das Standardverhalten des Formulars (das Senden der Daten)
+
+        // Hole den Wert aus dem Eingabefeld
+        var userMessage = document.getElementById('userMessage').value;
+
+        // Sende die Daten mit Ajax an den Server
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/sendMessage', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Hier kannst du die Antwort des Servers verarbeiten
+                console.log('Antwort vom Server:', xhr.responseText);
+
+                // Hier könntest du zusätzliche Logik hinzufügen, je nachdem, was du mit der Antwort tun möchtest.
+                // Falls du zur Hauptseite navigieren möchtest, könntest du das mit window.location machen:
+                window.location.href = "/";
+            }
+        };
+        xhr.send('userMessage=' + encodeURIComponent(userMessage));
+    });

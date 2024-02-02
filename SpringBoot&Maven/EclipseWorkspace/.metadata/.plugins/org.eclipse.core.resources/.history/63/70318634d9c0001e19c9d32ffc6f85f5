@@ -1,0 +1,11 @@
+spring.datasource.url = jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username = postgres
+spring.datasource.password = password
+spring.jpa.hibernate.ddl-auto = create-drop
+spring.profiles.active=dev
+spring.http.multipart.enabled=true
+spring.http.multipart.file-extension-mapping.png=image/png
+#spring.security.user.name=admin
+#spring.security.user.password=1234
+
+
