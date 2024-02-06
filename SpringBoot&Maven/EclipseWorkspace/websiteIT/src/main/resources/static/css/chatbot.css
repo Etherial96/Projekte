@@ -11,11 +11,31 @@
 }
 .stickichatbot{
 	position: fixed;
-    top: 0;
-    right: 0;
-    width: 25vh;	
+	top: 10px; /* Abstand vom oberen Rand anpassen, wie gewünscht */
+	right: 10px;
 }
 .history{
+	display: none;
+	background-color: white;
+	color: black;
 	width: 25vh;
-	height: 15vh;	
+	height: 15vh;
+	resize: none;
+}
+#sendMessageForm {
+	display: none;
+}
+#toggle {
+	background-color: #3498db;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#toggle:hover {
+	background-color: #2980b9;
 }

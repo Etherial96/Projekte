@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/indexstyle.css">
+    <link rel="stylesheet" href="/css/responsivemenu.css">
+    <link rel="stylesheet" href="/css/chatbot.css">
+    <title>Responsive Menu</title>
+</head>
+<body>
+	<div class="wood">
+		<img id="topgif" src="/images/main.gif">
+		<p id="artname">Naturpark <br>Bochum</p>
+	</div>
+	<div class="stickimenu">
+		<nav class="navbar">
+			<a class="logo textcolor" href="#">Naturpark</a>
+			<input type="checkbox" id="toggle_button">
+			<label for="toggle_button" class="toggle_button">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</label>
+			<ul>
+				<li><a class="textcolor" th:href="@{/}">Home</a></li>
+				<li class="expandable_li">
+					<input type="checkbox" id="products_checkbox">
+					<label for="products_checkbox"><a class="textcolor" th:href="@{/akt}">Aktivitäten</a></label>
+					<ul class="dropdown">
+						<li><a class="textcolor" href="#">Kletterwald</a></li>
+						<li><a class="textcolor" href="#">Rafting</a></li>
+						<li><a class="textcolor" href="#">Seilbahn</a></li>
+					</ul>
+				</li>
+				<li><a class="textcolor" href="#">Galerie</a></li>
+				<li><a class="textcolor" href="#">Login</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div id="newvideos">
+		
+		<div id="videoupload1"><img src="/images/rain.gif"><input class="button2" type="button" value="Kaufe die Reise"/></div>
+		<div id="videoupload2"><img  src="/images/cloudy.gif"><input class="button2" type="button" value="Kaufe die Reise"/></div>
+		<div id="videoupload3"><img  src="/images/nature.jpg"><input class="button2" type="button" value="Kaufe die Reise"/></div>
+	</div>
+    <div class="stickichatbot">
+		<textarea class="history" placeholder="Hallo?" disabled required></textarea>
+	    <form id="sendMessageForm" method="post">
+	        <input type="text" id="userMessage" name="userMessage">
+	        <button type="button" id="sendMessageButton">Senden</button>
+	    </form>
+    </div>
+	<script src="/js/indexjs.js"></script>
+	<script src="/js/chatbotajax.js"></script>
+</body>
+</html>
+

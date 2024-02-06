@@ -1,0 +1,49 @@
+:root{
+	--background-color: #314453;
+	--darker-background-color: #243848;
+	--accent-color: #A0C79C;
+	--text-color: #FFFFFF;
+	--navbar-height: 60px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.stickichatbot{
+	position: fixed;
+    top: 0;
+    right: 2vh;
+    width: 25vh;	
+}
+.history{
+	display: none;
+	background-color: white;
+	width: 25vh;
+	height: 15vh;
+	resize: none;
+}
+#sendMessageForm {
+	display: none;
+}
+#toggle {
+	background-color: #3498db;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#toggle:hover {
+	background-color: #2980b9;
+}
+
+@media screen and (max-width: 768px){
+	.stickichatbot{
+		position: sticky;
+	    bottom: 0;
+
+	}
+}

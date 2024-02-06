@@ -1,4 +1,15 @@
+
 document.getElementById('sendMessageButton').addEventListener('click', function () {
+    sendMessage();
+});
+document.getElementById('userMessage').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Verhindert, dass die Enter-Taste eine Zeilenumbruch hinzufügt
+        sendMessage();
+    }
+});
+
+function sendMessage() {
     var userMessage = document.getElementById('userMessage').value;
     var messageHistory = document.querySelector('.stickichatbot textarea.history');
 
@@ -27,9 +38,17 @@ document.getElementById('sendMessageButton').addEventListener('click', function 
     .catch(error => {
         console.error('Fehler beim Senden der Nachricht:', error);
     });
+}
+
+//Auf und zu klappen des Chats
+const toggle = document.getElementById('toggle');
+const historyTextarea = document.querySelector('.history');
+const sendMessageForm = document.getElementById('sendMessageForm');
+
+toggle.addEventListener('click', () => {
+   historyTextarea.style.display = (historyTextarea.style.display === 'block') ? 'none' : 'block';
+   sendMessageForm.style.display = (sendMessageForm.style.display === 'block') ? 'none' : 'block';
 });
-
-
 /*
 Veraltet
 
